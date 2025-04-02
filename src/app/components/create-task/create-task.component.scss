@@ -1,0 +1,41 @@
+form.card {
+ display: flex;
+ flex-direction: column;   
+ justify-content: space-around;
+ align-items: start;
+}
+
+.description-input {
+    height: 75px;
+    resize: none;
+}
+
+.completed-input {
+	width: 25px;
+	height: 25px;
+    accent-color: var(--grey-color);    
+    margin-right: 15px;
+	cursor: pointer;
+}
+
+.completed-input-container {
+    display: flex;
+}
+
+.completed-status {
+    align-self: center;
+    font-weight: bolder;
+}
+
+.taskForm {
+    animation: taskFormAnimation 0.3s ease-in;
+}
+
+@keyframes taskFormAnimation {
+    from  {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

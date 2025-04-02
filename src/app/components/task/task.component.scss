@@ -1,0 +1,36 @@
+
+.card-task-container {
+    display: flex; flex-direction: column;
+}
+
+.card-task-button {
+    display: flex; 
+    flex-direction: row;
+    align-items: end;
+}
+
+.task-title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.task-description {
+    word-wrap: break-word;
+    margin-top: 0;
+}
+
+.task {
+    animation: taskIn 0.5s ease-in;
+}
+
+@keyframes taskIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

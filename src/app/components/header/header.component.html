@@ -1,0 +1,30 @@
+<div class="header">
+    <div class="header-container">
+        <h1 class="header-title">TO DO</h1>
+
+        <app-search-task class="search-container"></app-search-task>
+
+        <div class="button-container">
+            <button [ngClass]="addOpen ? 'danger' : 'success'" (click)="addOpen = !addOpen">
+                @if (addOpen) {
+                <i class="bi bi-x-lg"></i>
+                } @else {
+                <i class="bi bi-plus-lg"></i>
+                }
+            </button>
+
+            <button [ngClass]="darkMode ? 'sun-color' : 'moon-color'" (click)="colorMode()">
+                @if (darkMode) {
+                <i class="bi bi-sun"></i>
+
+                } @else {
+                <i class="bi bi-moon"></i>
+                }
+            </button>
+        </div>
+    </div>
+
+    @if (addOpen) {
+    <app-create-task #formCreate></app-create-task>
+    }
+</div>

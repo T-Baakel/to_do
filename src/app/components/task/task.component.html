@@ -1,0 +1,27 @@
+@if (!edit) {
+<div class="card task" [ngClass]="{'success': task.completed }">
+    <div class="card-task-container">
+
+        <div>
+            <p class="task-title">{{task.title}}</p>
+            <hr class="divider">
+            <p class="task-description">{{task.description}}</p>
+        </div>
+
+
+        <div class="card-task-button">
+            <button [ngClass]="{'success': task.completed }" (click)="completeTask()">
+                @if (task.completed) {
+                <i class="bi bi-check-circle"></i>
+                } @else {
+                <i class="bi bi-question-circle"></i>
+                }
+            </button>
+            <button class="action" (click)="editTask()"><i class="bi bi-pen"></i></button>
+            <button class="danger" (click)="deleteTask()"><i class="bi bi-trash"></i></button>
+        </div>
+    </div>
+</div>
+} @else {
+<app-create-task [task]="task" (editDone)="edit = false"></app-create-task>
+}

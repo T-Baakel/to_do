@@ -1,0 +1,124 @@
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+    --grey-color: #495057;
+    --white-color: #ffffff; 
+    
+}  
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--grey-color);
+  background-color: var(--white-color);
+}
+
+input, textarea {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+input[type=text], input[type=search], textarea {
+  width: 90%;
+  border: none;
+  margin: 0;
+  outline: 1px solid lightgray;
+  padding: 10px
+}
+
+input[type=text]:focus-visible,input[type=search]:focus-visible, textarea:focus-visible {
+  outline: 2px solid lightgray;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top: 80px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  padding: 15px;
+  margin: 10px;
+  background-color: var(--white-color);
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card.success {
+  outline: 2px solid #38b000;
+}
+
+button {
+  margin: 4px 2px;
+  padding: 10px;
+  border: none;
+  font-size: 15px;
+  background-color: #CFD2CD;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--white-color);
+  background-color: var(--grey-color);
+}
+
+button.success {
+  color: var(--white-color);
+  background-color: #38b000;
+}
+
+button.success:hover {
+  color: var(--white-color);
+  background-color: #7ebc89;
+}
+
+button.action {
+  color: var(--white-color);
+  background-color: #00b4d8;
+}
+
+button.action:hover {
+  color: var(--white-color);
+  background-color: #3a6ea5;
+}
+
+button.danger {
+  color: var(--white-color);
+  background-color: #e70e02;
+}
+
+button.danger:hover {
+  color: var(--white-color);
+  background-color: #ab2836;
+}
+
+button:disabled,
+button[disabled],
+button:disabled:hover,
+button[disabled]:hover{
+  background-color: #cccccc;
+  color: var(--white-color);
+  cursor: not-allowed;
+}
+
+.divider {
+  border-top: 1px solid var(--grey-color);
+}

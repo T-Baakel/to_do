@@ -1,0 +1,44 @@
+.header {
+    
+    width: 100%; 
+    top: 0;
+    position: fixed;
+    margin-bottom: 30px;
+    background-color: var(--white-color);
+}
+
+.header-container {
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 8px 4px 8px 2px rgba(0,0,0,0.2);
+}
+
+.header-title {
+    margin-left: 10px; 
+    width: 20%; 
+    color: var(--grey-color);
+}
+
+.search-container {
+    width: 40%; 
+    flex-grow: 4; 
+    margin-left: 20px;
+}
+
+.button-container {
+    width: 20%; 
+    display: flex; 
+    justify-content: center;   
+}
+
+.sun-color {
+    color: #ffee32;
+    background-color: #0F0F0F;
+}
+
+.moon-color {
+    color: white;
+    background-color: #0F0F0F;
+}
+

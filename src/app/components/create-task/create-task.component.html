@@ -1,0 +1,20 @@
+<form class="card taskForm" [formGroup]="taskForm">
+    <label for="title">Title</label>
+    <input id="title" type="text" formControlName="title" />
+
+    <label for="description">Description</label>
+    <textarea class="description-input " id="description" type="text" formControlName="description"></textarea>
+
+    <label for="completed">Status</label>
+    <div class="completed-input-container">
+        <input class="completed-input" id="completed" type="checkbox" formControlName="completed" />
+        <span class="completed-status">{{taskForm.controls["completed"].value ? "Done" : "To do"}}</span>
+    </div>
+    <div>
+        @if (!edit) {
+        <button class="success" type="submit" [disabled]="!taskForm.valid" (click)="addTask()">Add</button>
+        } @else {
+        <button class="action" type="submit" [disabled]="!taskForm.valid" (click)="editTask()">Edit</button>
+        }
+    </div>
+</form>
